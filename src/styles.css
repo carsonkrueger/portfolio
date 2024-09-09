@@ -3,3 +3,18 @@
 @tailwind utilities;
 
 /* You can add global styles to this file, and also import other style files */
+@layer base {
+    @font-face {
+        font-family: "Suse";
+        font-style: normal;
+        font-weight: 400;
+        src: url("../assets/fonts/SUSE-Light.ttf") format("truetype");
+    }
+
+    @font-face {
+        font-family: "Lalezar";
+        font-style: normal;
+        font-weight: 400;
+        src: url("../assets/fonts/Lalezar-Regular.ttf") format("truetype");
+    }
+}

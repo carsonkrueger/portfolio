@@ -17,4 +17,13 @@
         font-weight: 400;
         src: url("../assets/fonts/Lalezar-Regular.ttf") format("truetype");
     }
+
+    html,
+    body {
+        height: 100%;
+    }
+
+    .page {
+        @apply flex flex-col grow;
+    }
 }

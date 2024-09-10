@@ -7,8 +7,4 @@ import { Component } from "@angular/core";
   templateUrl: "./home.component.html",
   styleUrl: "./home.component.css",
 })
-export class HomeComponent {
-  log(s: string) {
-    console.log(s);
-  }
-}
+export class HomeComponent {}

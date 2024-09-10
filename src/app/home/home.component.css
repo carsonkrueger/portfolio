@@ -1,0 +1,3 @@
+:host {
+    @apply page justify-center items-start lg:px-[10%] bg-gray-200;
+}

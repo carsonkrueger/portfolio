@@ -1,8 +1,11 @@
 import express from "express";
+import dotenv from "dotenv";
 // import { AppConfiguration } from "@angular-environment-variables/app-configuration";
 // const express = require("express");
 
-const port = 3000;
+dotenv.config();
+
+const port = process.env.PORT ?? 3000;
 
 const app = express();
 

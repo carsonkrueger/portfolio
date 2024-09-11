@@ -1,6 +1,30 @@
-<p class="font-display font-extralight text-6xl leading-tight">
-    Hi There!
-    <br />
-    I'm <span class="text-orange-500">Carson</span> Krueger.
-</p>
-<p class="font-body text-xl">I am a Full-Stack Developer.</p>
+<div>
+    <section class="flex flex-col">
+        <p class="font-display font-extralight text-6xl leading-tight">
+            Hi There!
+            <br />
+            I'm <span class="text-orange-500">Carson</span> Krueger.
+        </p>
+        <p class="font-body text-xl">I am a Full-Stack Developer.</p>
+
+        <div class="flex gap-3 py-4">
+            <app-icon
+                [inputClass]="secondaryColorClass"
+                href="https://www.linkedin.com/in/carson-krueger-pog/"
+            >
+                <img src="linkedin.svg" [width]="imgSize" [height]="imgSize" />
+            </app-icon>
+
+            <app-icon
+                [inputClass]="secondaryColorClass"
+                href="https://github.com/carsonkrueger"
+            >
+                <img src="github.svg" [width]="imgSize" [height]="imgSize" />
+            </app-icon>
+
+            <app-icon [inputClass]="secondaryColorClass">
+                <img src="github.svg" [width]="imgSize" [height]="imgSize" />
+            </app-icon>
+        </div>
+    </section>
+</div>

@@ -1,0 +1,10 @@
+<a [href]="href ? href : '#'" [target]="target">
+    <button
+        class="rounded-full p-3 aspect-square flex justify-center items-center {{
+            inputClass
+        }}"
+        (click)="click ? click($event) : null"
+    >
+        <ng-content />
+    </button>
+</a>

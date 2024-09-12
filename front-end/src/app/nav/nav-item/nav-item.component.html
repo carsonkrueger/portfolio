@@ -1,8 +1,10 @@
-<button
-    class="flex justify-center items-center p-2 gap-2 rounded-md font-body text-lg"
-    [class.flex-row-reverse]="reversed"
-    (click)="handleClick ? handleClick($event) : null"
->
-    <ng-content />
-    <a [routerLink]="navTo ? navTo : null">{{ navText }}</a>
-</button>
+<a [routerLink]="navTo ? navTo : null">
+    <button
+        class="flex justify-center items-center p-2 gap-2 rounded-md font-body text-lg"
+        [class.flex-row-reverse]="reversed"
+        (click)="handleClick ? handleClick($event) : null"
+    >
+        <ng-content />
+        {{ navText }}
+    </button>
+</a>

@@ -1,3 +1,3 @@
 :host {
-    @apply page justify-center items-start lg:px-[10%] bg-peaks object-contain bg-center bg-fixed bg-cover md:bg-auto;
+    @apply page justify-center items-start bg-peaks object-contain bg-center bg-fixed bg-cover md:bg-auto;
 }

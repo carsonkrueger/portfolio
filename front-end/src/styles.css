@@ -30,6 +30,10 @@
     }
 
     .page {
-        @apply flex flex-col grow pl-mobile-nav-width md:pl-nav-width;
+        @apply flex flex-col;
+    }
+
+    .nav-padding {
+        @apply pl-mobile-nav-width md:pl-nav-width;
     }
 }

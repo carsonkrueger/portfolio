@@ -1,38 +1,42 @@
 <nav
-    class="flex flex-col justify-between items-center gap-2 fixed px-4 py-6 left-0 top-0 z-50 h-screen w-nav-width"
+    class="flex flex-col justify-between items-center gap-2 fixed py-4 md:px-5 left-0 top-0 z-50 h-screen w-mobile-nav-width md:w-nav-width backdrop-blur-sm shadow-md"
 >
     <div class="flex flex-col justify-center items-center gap-2">
-        <img src="me.png" class="rounded-full h-16 w-16 object-cover" />
+        <img
+            src="me.png"
+            class="rounded-full aspect-square w-[50%] min-w-8 object-cover border-secondary border-2"
+        />
         <h2 class="md:block hidden font-body text-secondary">Carson Krueger</h2>
+        <h2 class="block md:hidden font-body text-secondary">CK</h2>
         <h2 class="md:block hidden font-body">Crkruege&#64;gmail.com</h2>
     </div>
 
     <ul class="flex flex-col items-center gap-2">
-        <app-nav-item navTo="/home">
+        <app-nav-item>
+            <img src="profile_user.svg" class="h-[24px] w-[24px]" />
+        </app-nav-item>
+        <app-nav-item>
+            <img src="tool.svg" class="h-[24px] w-[24px]" />
+        </app-nav-item>
+        <app-nav-item>
             <img src="github.svg" class="h-[24px] w-[24px]" />
         </app-nav-item>
-        <app-nav-item navTo="/home">
+        <app-nav-item>
             <img src="github.svg" class="h-[24px] w-[24px]" />
         </app-nav-item>
-        <app-nav-item navTo="/home">
-            <img src="github.svg" class="h-[24px] w-[24px]" />
-        </app-nav-item>
-        <app-nav-item navTo="/home">
-            <img src="github.svg" class="h-[24px] w-[24px]" />
-        </app-nav-item>
-        <app-nav-item navTo="/home">
+        <app-nav-item>
             <img src="github.svg" class="h-[24px] w-[24px]" />
         </app-nav-item>
     </ul>
 
     <ul>
-        <app-nav-item navTo="/home">
+        <app-nav-item>
             <img src="resume.svg" class="h-[24px] w-[24px]" />
         </app-nav-item>
-        <app-nav-item navTo="/home">
+        <app-nav-item>
             <img src="github.svg" class="h-[24px] w-[24px]" />
         </app-nav-item>
-        <app-nav-item navTo="/home">
+        <app-nav-item>
             <img src="linkedin.svg" class="h-[24px] w-[24px]" />
         </app-nav-item>
     </ul>

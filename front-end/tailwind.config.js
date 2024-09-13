@@ -10,6 +10,7 @@ module.exports = {
       },
       spacing: {
         "nav-width": "var(--nav-width)",
+        "mobile-nav-width": "var(--mobile-nav-width)",
       },
       backgroundImage: {
         peaks: "url('/peak_background.svg')",

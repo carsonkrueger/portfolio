@@ -20,6 +20,7 @@
 
     :root {
         --nav-width: 200px;
+        --mobile-nav-width: 40px;
     }
 
     html,
@@ -29,6 +30,6 @@
     }
 
     .page {
-        @apply flex flex-col grow;
+        @apply flex flex-col grow pl-mobile-nav-width md:pl-nav-width;
     }
 }

@@ -18,9 +18,14 @@
         src: url("../assets/fonts/Lalezar-Regular.ttf") format("truetype");
     }
 
+    :root {
+        --nav-width: 200px;
+    }
+
     html,
     body {
         height: 100%;
+        color: #eeeeee;
     }
 
     .page {

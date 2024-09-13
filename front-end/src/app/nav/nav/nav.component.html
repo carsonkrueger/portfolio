@@ -1,12 +1,38 @@
 <nav
-    class="flex items-center justify-between gap-2 bg-white sticky top-0 p-2 shadow-lg lg:px-[10%] z-50"
+    class="flex flex-col justify-between items-center gap-2 fixed px-4 py-6 left-0 top-0 z-50 h-screen w-nav-width"
 >
-    <h2 class="font-body text-lg">Carson</h2>
-    <ul class="flex gap-2">
-        <app-nav-item navText="About" navTo="/home" />
-        <app-nav-item navText="Skills" />
-        <app-nav-item navText="Experience" />
-        <app-nav-item navText="Projects" />
-        <app-nav-item navText="Contact" />
+    <div class="flex flex-col justify-center items-center gap-2">
+        <img src="me.png" class="rounded-full h-16 w-16 object-cover" />
+        <h2 class="font-body text-lg">Carson Krueger</h2>
+    </div>
+
+    <ul class="flex flex-col items-center gap-2">
+        <app-nav-item navTo="/home">
+            <img src="github.svg" class="h-[24px] w-[24px]" />
+        </app-nav-item>
+        <app-nav-item navTo="/home">
+            <img src="github.svg" class="h-[24px] w-[24px]" />
+        </app-nav-item>
+        <app-nav-item navTo="/home">
+            <img src="github.svg" class="h-[24px] w-[24px]" />
+        </app-nav-item>
+        <app-nav-item navTo="/home">
+            <img src="github.svg" class="h-[24px] w-[24px]" />
+        </app-nav-item>
+        <app-nav-item navTo="/home">
+            <img src="github.svg" class="h-[24px] w-[24px]" />
+        </app-nav-item>
+    </ul>
+
+    <ul>
+        <app-nav-item navTo="/home">
+            <img src="resume.svg" class="h-[24px] w-[24px]" />
+        </app-nav-item>
+        <app-nav-item navTo="/home">
+            <img src="github.svg" class="h-[24px] w-[24px]" />
+        </app-nav-item>
+        <app-nav-item navTo="/home">
+            <img src="github.svg" class="h-[24px] w-[24px]" />
+        </app-nav-item>
     </ul>
 </nav>

@@ -8,6 +8,9 @@ module.exports = {
         body: ["Suse", ...defaultTheme.fontFamily.sans],
         display: ["Lalezar", ...defaultTheme.fontFamily.sans],
       },
+      spacing: {
+        "nav-width": "var(--nav-width)",
+      },
     },
   },
   plugins: [],

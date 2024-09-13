@@ -14,19 +14,19 @@
   <path
      d="m 102.19259,470.2166 c 0,11.5712 9.5232,21.0944 21.0944,21.0944 h 315.49444 c 11.5712,0 21.0944,-9.5232 21.0944,-21.0944 0,-11.5712 -9.5232,-21.0944 -21.0944,-21.0944 H 123.28699 c -11.6736,0 -21.0944,9.5232 -21.0944,21.0944 z m 336.58884,85.7088 H 123.28699 c -11.5712,0 -21.0944,9.5232 -21.0944,21.0944 0,11.5712 9.5232,21.0944 21.0944,21.0944 h 315.49444 c 11.5712,0 21.0944,-9.5232 21.0944,-21.0944 0,-11.5712 -9.5232,-21.0944 -21.0944,-21.0944 z"
      id="path1"
-     style="fill:#a855f7;fill-opacity:1" />
+     style="fill:#FFCC00;fill-opacity:1" />
   <path
      d="M 356.65921,-1.4014146e-6 H 42.188806 C 18.944006,-1.4014146e-6 5.8598681e-6,18.943999 5.8598681e-6,42.188799 V 650.0352 C 5.8598681e-6,673.28 18.944006,692.224 42.188806,692.224 H 521.31841 c 23.2448,0 42.1888,-18.944 42.1888,-42.1888 V 206.848 Z M 384.10241,87.142399 481.28001,184.32 h -89.9072 c -3.8912,0 -7.2704,-3.3792 -7.2704,-7.2704 z M 521.21601,649.9328 c 0,0 0,0.1024 0,0 l -479.027204,0.1024 c 0,0 -0.1024,0 -0.1024,-0.1024 V 42.291199 c 0,0 0,-0.1024 0.1024,-0.1024 H 340.17281 l 1.6384,1.6384 V 176.9472 c 0,27.2384 22.3232,49.4592 49.4592,49.4592 h 129.9456 z"
      id="path2"
-     style="fill:#a855f7;fill-opacity:1;stroke-width:1;stroke-dasharray:none" />
+     style="fill:#FFCC00;fill-opacity:1;stroke-width:1;stroke-dasharray:none" />
   <text
      xml:space="preserve"
-     style="font-size:213.891px;fill:#a855f7;fill-opacity:1;stroke-width:1.78243"
+     style="font-size:213.891px;fill:#FFCC00;fill-opacity:1;stroke-width:1.78243"
      x="140.47864"
      y="403.39062"
      id="text3"><tspan
        id="tspan3"
        x="140.47864"
        y="403.39062"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:213.891px;font-family:System-ui;-inkscape-font-specification:System-ui;fill:#a855f7;fill-opacity:1;stroke-width:1.78243">CV</tspan></text>
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:213.891px;font-family:System-ui;-inkscape-font-specification:System-ui;fill:#FFCC00;fill-opacity:1;stroke-width:1.78243">CV</tspan></text>
 </svg>

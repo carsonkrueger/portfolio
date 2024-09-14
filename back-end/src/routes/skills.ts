@@ -1,7 +1,8 @@
-import skills from "../../skills.json";
+import { Router } from "express";
+import skills from "../../static/skills.json";
 
 module.exports = (app: any) => {
-  const router = require("express").Router();
+  const router = Router();
 
   router.get("/", (req: any, res: any, next: any) => {
     res.send(skills);

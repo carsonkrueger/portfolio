@@ -9,11 +9,11 @@ const port = process.env.PORT ?? 3000;
 
 const app = express();
 
-const corsOptions = {
-  origin: "*",
-};
+// const corsOptions = {
+//   origin: "*",
+// };
 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
 // parse application/json bod
 app.use(express.json());
 // parse html form data
@@ -22,6 +22,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "/../../front-end/dist/browser")));
 
 require("./routes/skills.ts")(app);
+require("./routes/other-skills.ts")(app);
+require("./routes/resume.ts")(app);
 
 app.use("*", (_req, res) => {
   res.sendFile(

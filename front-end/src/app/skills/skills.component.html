@@ -1,6 +1,8 @@
 <div class="relative h-screen">
     <h1 class="page-header">Skills</h1>
-    <div class="flex flex-col bg-primary-lo w-full h-full nav-padding">
-        <app-skill-item name="Rust" progress="50%" />
+    <div class="bg-primary-lo w-full h-full nav-padding grid grid-cols-4 gap-4">
+        @for (skill of skills; track skill.name) {
+            <app-skill-item [name]="skill.name" [progress]="skill.percentage" />
+        }
     </div>
 </div>

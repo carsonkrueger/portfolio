@@ -10,5 +10,6 @@ import { CommonModule } from "@angular/common";
 })
 export class SkillItemComponent {
   @Input({ required: true }) name: string = "";
-  @Input({ required: true }) progress: string = "0%";
+  @Input({ required: true, transform: (v: number) => `${v}%` })
+  progress: string = "0%";
 }

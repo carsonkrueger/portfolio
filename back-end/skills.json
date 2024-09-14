@@ -1,41 +1,54 @@
 [
   {
-    "TypeScript": 90
+    "name": "TypeScript",
+    "percentage": 90
   },
   {
-    "React/React Native": 88
+    "name": "React/React Native",
+    "percentage": 88
   },
   {
-    "C#": 87
+    "name": "C#",
+    "percentage": 87
   },
   {
-    "C# Blazor": 85
+    "name": "C# Blazor",
+    "percentage": 85
   },
   {
-    "Rust": 85
+    "name": "Rust",
+    "percentage": 85
   },
   {
-    "SQL": 85
+    "name": "SQL",
+    "percentage": 85
   },
   {
-    "Axum": 84
+    "name": "Axum",
+    "percentage": 84
   },
   {
-    "ASP.NET": 83
+    "name": "ASP.NET",
+    "percentage": 83
   },
   {
-    "Node.js": 81
+    "name": "Node.js",
+    "percentage": 81
   },
   {
-    "Postgres": 80
+    "name": "Postgres",
+    "percentage": 80
   },
   {
-    "C++/C": 78
+    "name": "C++/C",
+    "percentage": 78
   },
   {
-    "Python": 75
+    "name": "Python",
+    "percentage": 75
   },
   {
-    "Angular": 72
+    "name": "Angular",
+    "percentage": 72
   }
 ]

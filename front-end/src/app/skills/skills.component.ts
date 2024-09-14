@@ -1,12 +1,13 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
+import { SkillItemComponent } from "../skill-item/skill-item.component";
 
 @Component({
-  selector: 'app-skills',
+  selector: "app-skills",
   standalone: true,
-  imports: [],
-  templateUrl: './skills.component.html',
-  styleUrl: './skills.component.css'
+  imports: [SkillItemComponent],
+  templateUrl: "./skills.component.html",
+  styleUrl: "./skills.component.css",
 })
 export class SkillsComponent {
-
+  num: number = 18;
 }

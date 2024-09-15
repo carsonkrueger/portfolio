@@ -18,6 +18,7 @@ export class SkillsComponent implements OnInit {
   constructor(private http: HttpClient) {}
 
   skills: Skill[] = [];
+  otherSkills: string[] = [];
   numFeaturedSkills: number = 3;
 
   getSkills() {
@@ -26,7 +27,14 @@ export class SkillsComponent implements OnInit {
     });
   }
 
+  getOtherSkills() {
+    this.http.get("http://localhost:3000/other-skills/").subscribe((res) => {
+      this.otherSkills = res as string[];
+    });
+  }
+
   ngOnInit() {
     this.getSkills();
+    this.getOtherSkills();
   }
 }

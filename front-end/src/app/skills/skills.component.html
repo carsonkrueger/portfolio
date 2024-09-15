@@ -1,9 +1,9 @@
 <h2 class="page-header">Skills</h2>
-<div
-    class="flex flex-col gap-10 justify-center items-center h-full pt-12 pb-24"
->
-    <h1 class="font-body text-2xl w-full text-center pb-12">Tools & Skills</h1>
-    <div class="grid grid-cols-3 gap-4 md:w-[55%]">
+<div class="flex flex-col justify-center items-center h-full pt-12 pb-24">
+    <h1 class="font-body text-2xl w-full text-center pb-12 px-2">
+        Tools & Skills
+    </h1>
+    <div class="grid grid-cols-3 gap-4 w-[80%] md:w-[55%] pb-16">
         @for (skill of skills; track skill.name; let idx = $index) {
             @if (idx < numFeaturedSkills) {
                 <app-skill-item
@@ -14,7 +14,7 @@
             }
         }
     </div>
-    <div class="grid grid-cols-4 gap-x-4 gap-y-16 md:w-[65%]">
+    <div class="grid grid-cols-4 gap-x-4 gap-y-16 w-[90%] md:w-[65%]">
         @for (skill of skills; track skill.name; let idx = $index) {
             @if (idx >= numFeaturedSkills) {
                 <app-skill-item
@@ -22,6 +22,14 @@
                     [progress]="skill.percentage"
                 />
             }
+        }
+    </div>
+    <p class="font-body text-secondary pt-16">Also</p>
+    <div
+        class="flex flex-wrap gap-6 justify-center items-center w-[85%] md:w-[70%]"
+    >
+        @for (skill of otherSkills; track skill) {
+            <p class="font-body">{{ skill }}</p>
         }
     </div>
 </div>

@@ -4,7 +4,7 @@
     "percentage": 90
   },
   {
-    "name": "React/React Native",
+    "name": "React",
     "percentage": 88
   },
   {
@@ -25,6 +25,10 @@
   },
   {
     "name": "Axum",
+    "percentage": 84
+  },
+  {
+    "name": "React Nat.",
     "percentage": 84
   },
   {

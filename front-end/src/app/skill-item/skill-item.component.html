@@ -1,7 +1,14 @@
 <div class="flex flex-col w-full h-full">
-    <h4 class="font-display text-secondary">{{ name }}</h4>
+    <h4
+        [class.font-body]="!featured"
+        [class.font-display]="featured"
+        class="text-secondary"
+    >
+        {{ name }}
+    </h4>
     <div
-        class="w-full rounded-full overflow-hidden min-h-1 min-w-4 bg-gray-500"
+        [class.h-4]="featured"
+        class="w-full rounded-full overflow-hidden min-h-2 min-w-4 bg-gray-500"
     >
         <div
             class="h-full bg-primary rounded-full"

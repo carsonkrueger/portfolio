@@ -38,6 +38,6 @@
     }
 
     .page-header {
-        @apply sticky top-4 pr-5 text-right font-body text-xl text-secondary;
+        @apply sticky top-4 pr-5 text-right font-body text-xl text-secondary h-0;
     }
 }

@@ -17,8 +17,8 @@ export type Skill = {
 export class SkillsComponent implements OnInit {
   constructor(private http: HttpClient) {}
 
-  num: number = 18;
   skills: Skill[] = [];
+  numFeaturedSkills: number = 3;
 
   getSkills() {
     this.http.get("http://localhost:3000/skills/").subscribe((res) => {

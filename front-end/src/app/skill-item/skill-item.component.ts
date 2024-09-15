@@ -12,4 +12,5 @@ export class SkillItemComponent {
   @Input({ required: true }) name: string = "";
   @Input({ required: true, transform: (v: number) => `${v}%` })
   progress: string = "0%";
+  @Input() featured: boolean = false;
 }

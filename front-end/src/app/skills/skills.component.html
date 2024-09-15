@@ -1,8 +1,27 @@
-<div class="relative h-screen">
-    <h1 class="page-header">Skills</h1>
-    <div class="bg-primary-lo w-full h-full nav-padding grid grid-cols-4 gap-4">
-        @for (skill of skills; track skill.name) {
-            <app-skill-item [name]="skill.name" [progress]="skill.percentage" />
+<h2 class="page-header">Skills</h2>
+<div
+    class="flex flex-col gap-10 justify-center items-center h-full pt-12 pb-24"
+>
+    <h1 class="font-body text-2xl w-full text-center pb-12">Tools & Skills</h1>
+    <div class="grid grid-cols-3 gap-4 md:w-[55%]">
+        @for (skill of skills; track skill.name; let idx = $index) {
+            @if (idx < numFeaturedSkills) {
+                <app-skill-item
+                    [name]="skill.name"
+                    [progress]="skill.percentage"
+                    [featured]="true"
+                />
+            }
+        }
+    </div>
+    <div class="grid grid-cols-4 gap-x-4 gap-y-16 md:w-[65%]">
+        @for (skill of skills; track skill.name; let idx = $index) {
+            @if (idx >= numFeaturedSkills) {
+                <app-skill-item
+                    [name]="skill.name"
+                    [progress]="skill.percentage"
+                />
+            }
         }
     </div>
 </div>

@@ -24,6 +24,7 @@ app.use(express.static(path.join(__dirname, "/../../front-end/dist/browser")));
 require("./routes/skills.ts")(app);
 require("./routes/other-skills.ts")(app);
 require("./routes/resume.ts")(app);
+require("./routes/email.ts")(app);
 
 app.use("*", (_req, res) => {
   res.sendFile(

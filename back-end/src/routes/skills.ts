@@ -1,7 +1,7 @@
-import { Router } from "express";
+import { Router, Express } from "express";
 import skills from "../../static/skills.json";
 
-module.exports = (app: any) => {
+module.exports = (app: Express) => {
   const router = Router();
 
   router.get("/", (req: any, res: any, next: any) => {

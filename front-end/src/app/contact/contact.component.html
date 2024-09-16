@@ -1,0 +1,29 @@
+<form
+    class="max-w-[90%] md:max-w-96 flex flex-col gap-4 justify-center items-center mx-auto pt-16 pb-32"
+>
+    <h1 class="text-2xl font-body text-secondary pb-12">Contact Me</h1>
+    <label class="text-start w-full">From</label>
+    <input
+        name="from"
+        class="rounded-md border-[1px] border-secondary w-full p-1 text-black"
+        [(ngModel)]="from"
+        [disabled]="loading"
+    />
+    <label class="text-start w-full">Message</label>
+    <textarea
+        name="body"
+        class="rounded-md border-[1px] border-secondary w-full min-h-24 p-1 text-black"
+        [(ngModel)]="body"
+        rows="8"
+        cols="50"
+        [disabled]="loading"
+    >
+    </textarea>
+    <button
+        type="button"
+        class="rounded-md border-[1px] border-secondary text-secondary px-2 self-end"
+        (click)="sendEmail()"
+    >
+        Send
+    </button>
+</form>

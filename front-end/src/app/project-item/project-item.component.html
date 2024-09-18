@@ -1,0 +1,22 @@
+<div
+    [class.flex-row-reverse]="zeroRemainder"
+    [class.pr-64]="zeroRemainder"
+    [class.pl-64]="!zeroRemainder"
+    class="flex gap-4 w-full justify-center items-center"
+>
+    <p class="font-body text-lg max-w-[600px]">
+        {{ item?.bodyText }}
+    </p>
+    <a [href]="item?.link" target="_blank" class="flex flex-col gap-1">
+        <img
+            [src]="item?.imgSrc"
+            [class.hidden]="item?.imgSrc === undefined"
+            class="max-h-36 max-w-36 size-36"
+        />
+        <p
+            class="rounded-lg border-secondary border-[1px] px-2 py-1 text-secondary text-center"
+        >
+            {{ item?.linkText }}
+        </p>
+    </a>
+</div>

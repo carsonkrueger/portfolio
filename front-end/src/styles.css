@@ -34,10 +34,10 @@
     }
 
     .nav-padding {
-        @apply pl-mobile-nav-width md:pl-nav-width;
+        @apply px-mobile-nav-width md:px-nav-width;
     }
 
     .page-header {
-        @apply sticky top-4 pr-5 text-right font-body text-xl text-secondary h-0;
+        @apply font-body text-3xl py-16 text-center;
     }
 }

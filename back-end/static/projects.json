@@ -1,0 +1,30 @@
+[
+  {
+    "linkText": "Flex Forum",
+    "linkUrl": null,
+    "sourceUrl": "https://github.com/carsonkrueger",
+    "body": "A mobile app designed for gym goers to record workout history, and to share pictures and workout history. Created using React Native, Rust, Postgresql, and AWS.",
+    "imgUrl": null
+  },
+  {
+    "linkText": "Ivalu",
+    "linkUrl": "https://ivalu.nsbsd.org",
+    "sourceUrl": null,
+    "body": "A web application designed to help train the Iñupiat people in Alaska perserve their native language. Uses C# Blazor, ASP.NET, and MySql.",
+    "imgUrl": null
+  },
+  {
+    "linkText": "Compiler/Assembler/VM",
+    "linkUrl": null,
+    "sourceUrl": null,
+    "body": "A Compiler for the KXI language, written in Rust for Utah Valley University's Computer Science Bachelor's program. Available upon request. Compiles sourceUrl code to assembly, then creates byte code to run on the virtual machine.",
+    "imgUrl": null
+  },
+  {
+    "linkText": "Duck Typer",
+    "linkUrl": "https://duck-typer.vercel.app/",
+    "sourceUrl": "https://github.com/carsonkrueger/DuckTyper",
+    "body": "A typing game to help you refine your typing skills. Inspired by Monkey Type. Created using Next.js and Vercel.",
+    "imgUrl": null
+  }
+]

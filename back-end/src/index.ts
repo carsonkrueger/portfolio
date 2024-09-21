@@ -25,6 +25,7 @@ require("./routes/skills.ts")(app);
 require("./routes/other-skills.ts")(app);
 require("./routes/resume.ts")(app);
 require("./routes/email.ts")(app);
+require("./routes/projects.ts")(app);
 
 app.use("*", (_req, res) => {
   res.sendFile(

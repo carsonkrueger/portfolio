@@ -1,6 +1,6 @@
 <h1 class="page-header">Projects</h1>
 <ul class="flex flex-col gap-8 pb-32">
-    @for (item of items; track item.index) {
-        <app-project-item [item]="item" />
+    @for (item of items; track item.body; let idx = $index) {
+        <app-project-item [item]="item" [index]="idx" />
     }
 </ul>

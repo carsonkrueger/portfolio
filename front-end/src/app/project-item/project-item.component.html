@@ -5,12 +5,12 @@
     class="flex gap-4 w-full justify-center items-center"
 >
     <p class="font-body text-lg max-w-[600px]">
-        {{ item?.bodyText }}
+        {{ item?.body }}
     </p>
-    <a [href]="item?.link" target="_blank" class="flex flex-col gap-1">
+    <a [href]="item?.linkUrl" target="_blank" class="flex flex-col gap-1">
         <img
-            [src]="item?.imgSrc"
-            [class.hidden]="item?.imgSrc === undefined"
+            [src]="item?.imgUrl"
+            [class.hidden]="item?.imgUrl === undefined"
             class="max-h-36 max-w-36 size-36"
         />
         <p

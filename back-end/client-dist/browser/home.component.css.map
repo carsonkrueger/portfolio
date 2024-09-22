@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/home/home.component.css"],
+  "sourcesContent": [":host {\n    @apply page justify-center items-start bg-peaks object-contain bg-center bg-fixed bg-cover md:bg-auto;\n}\n"],
+  "mappings": ";AACI;AAAA,WAAA;AAAA,kBAAA;AAAA,eAAA;AAAA,mBAAA;AAAA,oBAAA;AAAA,mBAAA;AAAA,yBAAA;AAAA,uBAAA;AAAA,cAAA;AAAqG;AAArG,OAAA,CAAA,SAAA,EAAA;AAAA;AAAA,qBAAA;AAAqG;AAAA;",
+  "names": []
+}

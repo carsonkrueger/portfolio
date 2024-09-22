@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/projects/projects.component.css"],
+  "sourcesContent": [":host {\n    @apply nav-padding w-full;\n}\n"],
+  "mappings": ";AACI;AAAA,gBAAA,IAAA;AAAA,iBAAA,IAAA;AAAyB;AAAzB,OAAA,CAAA,SAAA,EAAA;AAAA;AAAA,kBAAA,IAAA;AAAA,mBAAA,IAAA;AAAyB;AAAA;AAAzB;AAAA,SAAA;AAAyB;",
+  "names": []
+}

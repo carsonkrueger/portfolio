@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/skills/skills.component.css"],
+  "sourcesContent": [":host {\n    @apply w-full relative bg-primary-lo nav-padding;\n}\n"],
+  "mappings": ";AACI;AAAA,gBAAA,IAAA;AAAA,iBAAA,IAAA;AAAgD;AAAhD,OAAA,CAAA,SAAA,EAAA;AAAA;AAAA,kBAAA,IAAA;AAAA,mBAAA,IAAA;AAAgD;AAAA;AAAhD;AAAA,YAAA;AAAA,SAAA;AAAA,mBAAA;AAAA,oBAAA,IAAA,GAAA,GAAA,GAAA,EAAA,IAAA;AAAgD;",
+  "names": []
+}

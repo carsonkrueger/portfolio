@@ -19,7 +19,7 @@ app.use(express.json());
 // parse html form data
 app.use(express.urlencoded({ extended: false }));
 // serve angular static build dir
-app.use(express.static(path.join(__dirname, "/../../front-end/dist/browser")));
+app.use(express.static(path.join(__dirname, "../client-dist/browser")));
 
 require("./routes/skills.ts")(app);
 require("./routes/other-skills.ts")(app);

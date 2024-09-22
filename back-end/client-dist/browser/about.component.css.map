@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/about/about.component.css"],
+  "sourcesContent": [":host {\n    @apply relative w-full h-screen nav-padding;\n}\n"],
+  "mappings": ";AACI;AAAA,gBAAA,IAAA;AAAA,iBAAA,IAAA;AAA2C;AAA3C,OAAA,CAAA,SAAA,EAAA;AAAA;AAAA,kBAAA,IAAA;AAAA,mBAAA,IAAA;AAA2C;AAAA;AAA3C;AAAA,YAAA;AAAA,UAAA;AAAA,SAAA;AAA2C;",
+  "names": []
+}

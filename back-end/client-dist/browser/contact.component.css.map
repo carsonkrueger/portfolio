@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/contact/contact.component.css"],
+  "sourcesContent": [":host {\n    @apply nav-padding w-full bg-primary-lo;\n}\n"],
+  "mappings": ";AACI;AAAA,gBAAA,IAAA;AAAA,iBAAA,IAAA;AAAuC;AAAvC,OAAA,CAAA,SAAA,EAAA;AAAA;AAAA,kBAAA,IAAA;AAAA,mBAAA,IAAA;AAAuC;AAAA;AAAvC;AAAA,SAAA;AAAA,mBAAA;AAAA,oBAAA,IAAA,GAAA,GAAA,GAAA,EAAA,IAAA;AAAuC;",
+  "names": []
+}

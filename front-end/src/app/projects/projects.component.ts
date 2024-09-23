@@ -16,7 +16,8 @@ export class ProjectsComponent implements OnInit {
     constructor(private http: HttpClient) {}
 
     ngOnInit(): void {
-        ProjectItemModel.getAllProjectItems(this.http).then((items) => {
+        const obs = ProjectItemModel.getAllProjectItems(this.http);
+        obs.subscribe((items) => {
             this.items = items;
         });
     }

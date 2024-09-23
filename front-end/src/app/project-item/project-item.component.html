@@ -7,7 +7,11 @@
     <p class="font-body text-lg max-w-[600px]">
         {{ item?.body }}
     </p>
-    <a [href]="item?.linkUrl" target="_blank" class="flex flex-col gap-1">
+    <a
+        [attr.href]="item?.linkUrl !== undefined ? item?.linkUrl : null"
+        target="_blank"
+        class="flex flex-col gap-1 justify-center items-center"
+    >
         <img
             [src]="item?.imgUrl"
             [class.hidden]="item?.imgUrl === undefined"

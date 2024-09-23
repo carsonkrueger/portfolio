@@ -42237,10 +42237,10 @@ var ContactComponent = class _ContactComponent {
 // src/app/project-item/project-item.component.ts
 var ProjectItemComponent = class _ProjectItemComponent {
   _item;
-  // @Input({ required: true }) item?: ProjectItem = undefined;
+  index = 0;
   set item(value) {
     this._item = value;
-    this.zeroRemainder = (this._item?.index ?? 0) % 2 === 0;
+    this.zeroRemainder = this.index % 2 === 0;
   }
   get item() {
     return this._item;
@@ -42249,7 +42249,7 @@ var ProjectItemComponent = class _ProjectItemComponent {
   static \u0275fac = function ProjectItemComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _ProjectItemComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ProjectItemComponent, selectors: [["app-project-item"]], inputs: { item: "item" }, standalone: true, features: [\u0275\u0275StandaloneFeature], decls: 7, vars: 12, consts: [[1, "flex", "gap-4", "w-full", "justify-center", "items-center"], [1, "font-body", "text-lg", "max-w-[600px]"], ["target", "_blank", 1, "flex", "flex-col", "gap-1", 3, "href"], [1, "max-h-36", "max-w-36", "size-36", 3, "src"], [1, "rounded-lg", "border-secondary", "border-[1px]", "px-2", "py-1", "text-secondary", "text-center"]], template: function ProjectItemComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ProjectItemComponent, selectors: [["app-project-item"]], inputs: { index: "index", item: "item" }, standalone: true, features: [\u0275\u0275StandaloneFeature], decls: 7, vars: 12, consts: [[1, "flex", "gap-4", "w-full", "justify-center", "items-center"], [1, "font-body", "text-lg", "max-w-[600px]"], ["target", "_blank", 1, "flex", "flex-col", "gap-1", "justify-center", "items-center"], [1, "max-h-36", "max-w-36", "size-36", 3, "src"], [1, "rounded-lg", "border-secondary", "border-[1px]", "px-2", "py-1", "text-secondary", "text-center"]], template: function ProjectItemComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "div", 0)(1, "p", 1);
       \u0275\u0275text(2);
@@ -42263,73 +42263,88 @@ var ProjectItemComponent = class _ProjectItemComponent {
     if (rf & 2) {
       \u0275\u0275classProp("flex-row-reverse", ctx.zeroRemainder)("pr-64", ctx.zeroRemainder)("pl-64", !ctx.zeroRemainder);
       \u0275\u0275advance(2);
-      \u0275\u0275textInterpolate1(" ", ctx.item == null ? null : ctx.item.bodyText, " ");
+      \u0275\u0275textInterpolate1(" ", ctx.item == null ? null : ctx.item.body, " ");
       \u0275\u0275advance();
-      \u0275\u0275property("href", ctx.item == null ? null : ctx.item.link, \u0275\u0275sanitizeUrl);
+      \u0275\u0275attribute("href", (ctx.item == null ? null : ctx.item.linkUrl) !== void 0 ? ctx.item == null ? null : ctx.item.linkUrl : null, \u0275\u0275sanitizeUrl);
       \u0275\u0275advance();
-      \u0275\u0275classProp("hidden", (ctx.item == null ? null : ctx.item.imgSrc) === void 0);
-      \u0275\u0275property("src", ctx.item == null ? null : ctx.item.imgSrc, \u0275\u0275sanitizeUrl);
+      \u0275\u0275classProp("hidden", (ctx.item == null ? null : ctx.item.imgUrl) === void 0);
+      \u0275\u0275property("src", ctx.item == null ? null : ctx.item.imgUrl, \u0275\u0275sanitizeUrl);
       \u0275\u0275advance(2);
       \u0275\u0275textInterpolate1(" ", ctx.item == null ? null : ctx.item.linkText, " ");
     }
   } });
 };
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ProjectItemComponent, { className: "ProjectItemComponent", filePath: "src/app/project-item/project-item.component.ts", lineNumber: 18 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ProjectItemComponent, { className: "ProjectItemComponent", filePath: "src/app/project-item/project-item.component.ts", lineNumber: 11 });
 })();
 
+// src/util/environments.ts
+var Environment;
+(function(Environment2) {
+  Environment2[Environment2["DEVELOPEMENT"] = 0] = "DEVELOPEMENT";
+  Environment2[Environment2["PRODUCTION"] = 1] = "PRODUCTION";
+})(Environment || (Environment = {}));
+var ANGULAR_ENV = {
+  ENVIRONMENT: Environment.DEVELOPEMENT
+};
+
+// src/util/http-client.ts
+var PORT = ANGULAR_ENV.ENVIRONMENT === Environment.DEVELOPEMENT ? 3e3 : 80;
+var BASE_URL = ANGULAR_ENV.ENVIRONMENT === Environment.DEVELOPEMENT ? `http://localhost:${PORT}` : `youtube.com`;
+
+// src/models/project-item.ts
+var ProjectItemModel = class {
+  body;
+  linkText;
+  linkUrl;
+  sourceUrl;
+  imgUrl;
+  constructor(body, linkText, linkUrl, sourceUrl, imgUrl) {
+    this.body = body;
+    this.linkText = linkText;
+    this.linkUrl = linkUrl;
+    this.sourceUrl = sourceUrl;
+    this.imgUrl = imgUrl;
+  }
+  static getAllProjectItems(http) {
+    return http.get(`${BASE_URL}/projects`);
+  }
+};
+
 // src/app/projects/projects.component.ts
-var _forTrack02 = ($index, $item) => $item.index;
+var _forTrack02 = ($index, $item) => $item.body;
 function ProjectsComponent_For_4_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275element(0, "app-project-item", 2);
   }
   if (rf & 2) {
     const item_r1 = ctx.$implicit;
-    \u0275\u0275property("item", item_r1);
+    const \u0275$index_6_r2 = ctx.$index;
+    \u0275\u0275property("index", \u0275$index_6_r2)("item", item_r1);
   }
 }
 var ProjectsComponent = class _ProjectsComponent {
-  items = [
-    {
-      bodyText: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-      imgSrc: "",
-      index: 0,
-      link: "https://youtube.com",
-      linkText: "youtube"
-    },
-    {
-      bodyText: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-      imgSrc: "",
-      index: 1,
-      link: "https://youtube.com",
-      linkText: "youtube"
-    },
-    {
-      bodyText: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-      imgSrc: "",
-      index: 2,
-      link: "https://youtube.com",
-      linkText: "youtube"
-    },
-    {
-      bodyText: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-      imgSrc: "",
-      index: 3,
-      link: "https://youtube.com",
-      linkText: "youtube"
-    }
-  ];
+  http;
+  items = [];
+  constructor(http) {
+    this.http = http;
+  }
+  ngOnInit() {
+    const obs = ProjectItemModel.getAllProjectItems(this.http);
+    obs.subscribe((items) => {
+      this.items = items;
+    });
+  }
   static \u0275fac = function ProjectsComponent_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || _ProjectsComponent)();
+    return new (__ngFactoryType__ || _ProjectsComponent)(\u0275\u0275directiveInject(HttpClient));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ProjectsComponent, selectors: [["app-projects"]], standalone: true, features: [\u0275\u0275StandaloneFeature], decls: 5, vars: 0, consts: [[1, "page-header"], [1, "flex", "flex-col", "gap-8", "pb-32"], [3, "item"]], template: function ProjectsComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ProjectsComponent, selectors: [["app-projects"]], standalone: true, features: [\u0275\u0275StandaloneFeature], decls: 5, vars: 0, consts: [[1, "page-header"], [1, "flex", "flex-col", "gap-8", "pb-32"], [3, "index", "item"]], template: function ProjectsComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "h1", 0);
       \u0275\u0275text(1, "Projects");
       \u0275\u0275elementEnd();
       \u0275\u0275elementStart(2, "ul", 1);
-      \u0275\u0275repeaterCreate(3, ProjectsComponent_For_4_Template, 1, 1, "app-project-item", 2, _forTrack02);
+      \u0275\u0275repeaterCreate(3, ProjectsComponent_For_4_Template, 1, 2, "app-project-item", 2, _forTrack02);
       \u0275\u0275elementEnd();
     }
     if (rf & 2) {
@@ -42339,7 +42354,7 @@ var ProjectsComponent = class _ProjectsComponent {
   }, dependencies: [ProjectItemComponent], styles: ["\n\n[_nghost-%COMP%] {\n  padding-left: var(--mobile-nav-width);\n  padding-right: var(--mobile-nav-width);\n}\n@media (min-width: 768px) {\n  [_nghost-%COMP%] {\n    padding-left: var(--nav-width);\n    padding-right: var(--nav-width);\n  }\n}\n[_nghost-%COMP%] {\n  width: 100%;\n}\n/*# sourceMappingURL=projects.component.css.map */"] });
 };
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ProjectsComponent, { className: "ProjectsComponent", filePath: "src/app/projects/projects.component.ts", lineNumber: 14 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ProjectsComponent, { className: "ProjectsComponent", filePath: "src/app/projects/projects.component.ts", lineNumber: 13 });
 })();
 
 // src/app/home/home.component.ts

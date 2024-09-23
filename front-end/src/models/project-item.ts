@@ -1,10 +1,9 @@
 import { HttpClient } from "@angular/common/http";
 import { BASE_URL } from "../util/http-client";
-import { lastValueFrom, Observable } from "rxjs";
+import { Observable } from "rxjs";
 
 export class ProjectItemModel {
     constructor(
-        private http: HttpClient,
         public body: string,
         public linkText?: string,
         public linkUrl?: string,
@@ -12,12 +11,9 @@ export class ProjectItemModel {
         public imgUrl?: string,
     ) {}
 
-    static async getAllProjectItems(
+    static getAllProjectItems(
         http: HttpClient,
-    ): Promise<ProjectItemModel[]> {
-        const req = http.get(`${BASE_URL}/projects`);
-        return await lastValueFrom<ProjectItemModel[]>(
-            req as Observable<ProjectItemModel[]>,
-        );
+    ): Observable<ProjectItemModel[]> {
+        return http.get<ProjectItemModel[]>(`${BASE_URL}/projects`);
     }
 }

@@ -19,7 +19,7 @@ app.use(express.json());
 // parse html form data
 app.use(express.urlencoded({ extended: false }));
 // serve angular static build dir
-app.use(express.static(path.join(__dirname, "../client-dist/browser")));
+app.use(express.static(path.join(__dirname, "../dist/browser")));
 
 require("./routes/skills.ts")(app);
 require("./routes/other-skills.ts")(app);
@@ -28,11 +28,11 @@ require("./routes/email.ts")(app);
 require("./routes/projects.ts")(app);
 
 app.use("*", (_req, res) => {
-  res.sendFile(
-    path.join(__dirname, "/../../front-end/dist/browser/index.html"),
-  );
+    res.sendFile(
+        path.join(__dirname, "/../../front-end/dist/browser/index.html"),
+    );
 });
 
 app.listen(port, () => {
-  console.log(`listening on port ${port}`);
+    console.log(`listening on port ${port}`);
 });

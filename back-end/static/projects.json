@@ -17,7 +17,7 @@
         "linkText": "Compiler/Assembler/VM",
         "linkUrl": null,
         "sourceUrl": null,
-        "body": "A Compiler for the KXI language, written in Rust for Utah Valley University's Computer Science Bachelor's program. Available upon request. Compiles sourceUrl code to assembly, then creates byte code to run on the virtual machine.",
+        "body": "A compiler for the custom KXI programming language, written in Rust for Utah Valley University's computer science bachelor's program. Available upon request. Compiles source code to assembly, then creates byte code to run on my custom virtual machine.",
         "imgUrl": null
     },
     {

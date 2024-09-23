@@ -1,26 +1,20 @@
-<div
-    [class.flex-row-reverse]="zeroRemainder"
-    [class.pr-64]="zeroRemainder"
-    [class.pl-64]="!zeroRemainder"
-    class="flex gap-4 w-full justify-center items-center"
->
-    <p class="font-body text-lg max-w-[600px]">
-        {{ item?.body }}
-    </p>
-    <a
-        [attr.href]="item?.linkUrl !== undefined ? item?.linkUrl : null"
-        target="_blank"
-        class="flex flex-col gap-1 justify-center items-center"
-    >
-        <img
-            [src]="item?.imgUrl"
-            [class.hidden]="item?.imgUrl === undefined"
-            class="max-h-36 max-w-36 size-36"
-        />
-        <p
-            class="rounded-lg border-secondary border-[1px] px-2 py-1 text-secondary text-center"
-        >
-            {{ item?.linkText }}
+<div class="flex gap-2 justify-center w-full">
+    <img [src]="item?.imgUrl" class="max-h-36 max-w-36 size-36" />
+    <div class="flex flex-col gap-2">
+        <p class="font-body text-lg max-w-[600px]">
+            {{ item?.body }}
         </p>
-    </a>
+        <a
+            [attr.href]="item?.linkUrl !== undefined ? item?.linkUrl : null"
+            target="_blank"
+            class="flex flex-col gap-1 w-fit"
+        >
+            <p
+                [class.border-[1px]]="item?.linkUrl"
+                class="rounded-lg border-secondary px-2 py-1 text-secondary text-center"
+            >
+                {{ item?.linkText }}
+            </p>
+        </a>
+    </div>
 </div>

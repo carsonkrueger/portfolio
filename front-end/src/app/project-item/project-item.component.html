@@ -11,7 +11,12 @@
         >
             <p
                 [class.border-[1px]]="item?.linkUrl"
-                class="rounded-lg border-secondary px-2 py-1 text-secondary text-center"
+                [class.px-2]="item?.linkUrl"
+                [class.py-1]="item?.linkUrl"
+                [class.bg-secondary]="item?.linkUrl"
+                [class.text-secondary]="!item?.linkUrl"
+                [class.text-white]="item?.linkUrl"
+                class="rounded-lg border-secondary text-center"
             >
                 {{ item?.linkText }}
             </p>

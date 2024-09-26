@@ -21,11 +21,8 @@ app.use(express.urlencoded({ extended: false }));
 // serve angular static build dir
 app.use(express.static(path.join(__dirname, "../dist/browser")));
 
-require("./routes/skills.ts")(app);
-require("./routes/other-skills.ts")(app);
-require("./routes/resume.ts")(app);
 require("./routes/email.ts")(app);
-require("./routes/projects.ts")(app);
+require("./routes/resources.ts")(app);
 
 app.use("*", (_req, res) => {
     res.sendFile(

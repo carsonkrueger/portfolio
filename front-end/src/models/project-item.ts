@@ -14,6 +14,8 @@ export class ProjectItemModel {
     static getAllProjectItems(
         http: HttpClient,
     ): Observable<ProjectItemModel[]> {
-        return http.get<ProjectItemModel[]>(`${BASE_URL}/projects`);
+        return http.get<ProjectItemModel[]>(
+            `${BASE_URL}/resources/projects.json`,
+        );
     }
 }

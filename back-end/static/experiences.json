@@ -1,0 +1,23 @@
+[
+    {
+        "name": "Polar Bear Computers",
+        "role": "Full-Stack Developer (Contracted)",
+        "from": "Jan 2024",
+        "to": "Aug 2024",
+        "items": [
+            "Prototyped and created software to help preserve the Iñupiat people's of Alaska native language.",
+            "Performed code reviews.",
+            "Trained new coworkers.",
+            "C#, Blazor, ASP.NET, and Entity Framework"
+        ]
+    },
+    {
+        "name": "Walmart",
+        "role": "Personal Shopper",
+        "from": "Dec 2018",
+        "to": "Jan 2024",
+        "items": [
+            "Gathered groceries for customers while maintaining a clean and friendly environment."
+        ]
+    }
+]

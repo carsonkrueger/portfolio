@@ -1,5 +1,11 @@
 <div class="flex gap-4 justify-center w-full">
-    <img [src]="imgBlob" class="max-w-52 max-h-40 w-max object-cover" />
+    <a
+        [attr.href]="item?.linkUrl !== undefined ? item?.linkUrl : null"
+        target="_blank"
+        class="flex justify-center items-center"
+    >
+        <img [src]="imgBlob" class="max-w-52 max-h-40 object-cover" />
+    </a>
     <div class="flex flex-col gap-2">
         <p class="font-body text-lg max-w-[600px]">
             {{ item?.body }}

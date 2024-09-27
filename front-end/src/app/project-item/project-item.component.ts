@@ -1,5 +1,7 @@
-import { Component, Input } from "@angular/core";
+import { Component, Input, OnInit } from "@angular/core";
 import { ProjectItemModel } from "../../models/project-item";
+import { HttpClient } from "@angular/common/http";
+import { getStaticResource } from "../../models/resources";
 
 @Component({
     selector: "app-project-item",
@@ -8,7 +10,7 @@ import { ProjectItemModel } from "../../models/project-item";
     templateUrl: "./project-item.component.html",
     styleUrl: "./project-item.component.css",
 })
-export class ProjectItemComponent {
+export class ProjectItemComponent implements OnInit {
     private _item?: ProjectItemModel;
     @Input({ required: true }) index: number = 0;
 
@@ -23,4 +25,21 @@ export class ProjectItemComponent {
     }
 
     zeroRemainder: boolean = false;
+    imgBlob?: string;
+
+    constructor(private http: HttpClient) {}
+
+    ngOnInit(): void {
+        if (this._item && this._item.imgUrl) {
+            try {
+                getStaticResource(this.http, this._item.imgUrl).subscribe(
+                    (res) => {
+                        this.imgBlob = window.URL.createObjectURL(res);
+                    },
+                );
+            } catch (e) {
+                // report err
+            }
+        }
+    }
 }

@@ -1,5 +1,5 @@
-<div class="flex gap-2 justify-center w-full">
-    <img [src]="item?.imgUrl" class="max-h-36 max-w-36 size-36" />
+<div class="flex gap-4 justify-center w-full">
+    <img [src]="imgBlob" class="max-w-52 max-h-40 w-max object-cover" />
     <div class="flex flex-col gap-2">
         <p class="font-body text-lg max-w-[600px]">
             {{ item?.body }}
@@ -10,12 +10,11 @@
             class="flex flex-col gap-1 w-fit"
         >
             <p
-                [class.border-[1px]]="item?.linkUrl"
                 [class.px-2]="item?.linkUrl"
                 [class.py-1]="item?.linkUrl"
                 [class.bg-secondary]="item?.linkUrl"
                 [class.text-secondary]="!item?.linkUrl"
-                [class.text-white]="item?.linkUrl"
+                [class.text-black]="item?.linkUrl"
                 class="rounded-lg border-secondary text-center"
             >
                 {{ item?.linkText }}

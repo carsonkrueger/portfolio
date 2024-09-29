@@ -1,4 +1,4 @@
-<h1 class="page-header">Projects</h1>
+<h1 class="page-header" #projectsRef>Projects</h1>
 <ul class="flex flex-col gap-16 pb-32">
     @for (item of items$ | async; track item.body; let idx = $index) {
         <app-project-item [index]="idx" [item]="item" />

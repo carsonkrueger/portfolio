@@ -19,4 +19,12 @@ export class NavComponent {
     onSkillsClick = (e: Event) => {
         this.navService.onRefClick(this.navService.skillsRef);
     };
+
+    onProjectsClick = (e: Event) => {
+        this.navService.onRefClick(this.navService.projectsRef);
+    };
+
+    onExperiencesClick = (e: Event) => {
+        this.navService.onRefClick(this.navService.experiencesRef);
+    };
 }

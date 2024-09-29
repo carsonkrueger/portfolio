@@ -1,4 +1,4 @@
-<h1 class="page-header">Experience</h1>
+<h1 class="page-header" #experiencesRef>Experience</h1>
 <ul class="flex flex-col pb-32">
     @for (item of items$ | async; track item.name; let idx = $index) {
         <app-experience-item [item]="item" />

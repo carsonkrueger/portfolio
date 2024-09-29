@@ -27,4 +27,8 @@ export class NavComponent {
     onExperiencesClick = (e: Event) => {
         this.navService.onRefClick(this.navService.experiencesRef);
     };
+
+    onContactClick = (e: Event) => {
+        this.navService.onRefClick(this.navService.contactRef);
+    };
 }

@@ -8,6 +8,7 @@ export class NavService {
     public skillsRef?: ElementRef;
     public projectsRef?: ElementRef;
     public experiencesRef?: ElementRef;
+    public contactRef?: ElementRef;
 
     constructor() {}
 

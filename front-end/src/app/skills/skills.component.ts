@@ -35,9 +35,16 @@ export class SkillsComponent implements OnInit, AfterViewInit {
     @ViewChild("skillsRef") skillsRef!: ElementRef;
 
     getSkills() {
-        this.http.get(`${BASE_URL}/resources/skills.json`).subscribe((res) => {
-            this.skills = res as Skill[];
-        });
+        this.http
+            .get<Skill[]>(`${BASE_URL}/resources/skills.json`)
+            .subscribe((res) => {
+                this.skills = res.sort((a, b) => {
+                    if (a.percentage < b.percentage) {
+                        return -1;
+                    } else if (a.percentage == b.percentage) return 0;
+                    else return 1;
+                });
+            });
     }
 
     getOtherSkills() {

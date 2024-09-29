@@ -10,14 +10,26 @@
         </p>
         <p class="font-body text-xl">A Full-Stack Developer.</p>
 
-        <div class="flex gap-3 py-4">
-            <button
-                class="flex items-center gap-2 px-3 py-2 rounded-lg border-secondary border-2 font-body text-secondary"
-                (click)="downloadResume()"
-            >
-                Resume
-                <img src="resume.svg" class="h-6 w-6" />
-            </button>
+        <div class="flex gap-4">
+            <div class="flex gap-3 py-4">
+                <button
+                    class="flex items-center gap-2 px-3 py-2 rounded-lg border-secondary border-2 font-body text-secondary"
+                    (click)="downloadResume()"
+                >
+                    Resume
+                    <img src="resume.svg" class="h-6 w-6" />
+                </button>
+            </div>
+
+            <div class="flex gap-3 py-4">
+                <button
+                    class="flex items-center gap-2 px-3 py-2 rounded-lg border-white border-2 font-body"
+                    (click)="onContactClick()"
+                >
+                    Contact
+                    <img src="plane.svg" class="h-6 w-6 object-cover" />
+                </button>
+            </div>
         </div>
     </section>
 

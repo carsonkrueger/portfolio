@@ -52,4 +52,8 @@ export class AboutComponent implements AfterViewInit {
         console.log(this.aboutRef);
         this.navService.aboutRef = this.aboutRef;
     }
+
+    onContactClick = () => {
+        this.navService.onRefClick(this.navService.contactRef);
+    };
 }

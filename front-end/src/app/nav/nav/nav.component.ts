@@ -1,15 +1,22 @@
 import { Component } from "@angular/core";
 import { NavItemComponent } from "../nav-item/nav-item.component";
+import { NavService } from "../../../services/nav.service";
 
 @Component({
-  selector: "app-nav",
-  standalone: true,
-  imports: [NavItemComponent],
-  templateUrl: "./nav.component.html",
-  styleUrl: "./nav.component.css",
+    selector: "app-nav",
+    standalone: true,
+    imports: [NavItemComponent],
+    templateUrl: "./nav.component.html",
+    styleUrl: "./nav.component.css",
 })
 export class NavComponent {
-  log(e: Event) {
-    console.log(e);
-  }
+    constructor(private navService: NavService) {}
+
+    onAboutClick = (e: Event) => {
+        this.navService.onRefClick(this.navService.aboutRef);
+    };
+
+    onSkillsClick = (e: Event) => {
+        this.navService.onRefClick(this.navService.skillsRef);
+    };
 }

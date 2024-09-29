@@ -12,10 +12,10 @@
     </div>
 
     <ul class="flex flex-col items-center gap-2">
-        <app-nav-item>
+        <app-nav-item [handleClick]="onAboutClick">
             <img src="profile_user.svg" class="h-[24px] w-[24px]" />
         </app-nav-item>
-        <app-nav-item>
+        <app-nav-item [handleClick]="onSkillsClick">
             <img src="tool.svg" class="h-[24px] w-[24px]" />
         </app-nav-item>
         <app-nav-item>

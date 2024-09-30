@@ -10,7 +10,7 @@ import { NavService } from "../../../services/nav.service";
     styleUrl: "./nav.component.css",
 })
 export class NavComponent {
-    constructor(private navService: NavService) {}
+    constructor(protected navService: NavService) {}
 
     onAboutClick = (e: Event) => {
         this.navService.onRefClick(this.navService.aboutRef);

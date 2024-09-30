@@ -19,10 +19,10 @@ export class NavService {
         ref?.nativeElement.scrollIntoView({ behavior: "smooth" });
     }
 
-    downloadResume() {
+    public downloadResume = () => {
         if (this.blob === undefined) {
             this.http
-                .get("/resume", { responseType: "blob" })
+                .get("/resources/Resume.pdf", { responseType: "blob" })
                 .subscribe((res) => {
                     this.blob = new Blob([res as any], {
                         type: "application/pdf",
@@ -32,14 +32,14 @@ export class NavService {
         } else if (this.blob !== undefined) {
             this.clickDownload();
         }
-    }
+    };
 
-    clickDownload() {
+    private clickDownload = () => {
         if (this.blob === undefined) return;
         const url = window.URL.createObjectURL(this.blob);
         const link = document.createElement("a");
         link.href = url;
         link.download = "resume-carson-krueger.pdf";
         link.click();
-    }
+    };
 }

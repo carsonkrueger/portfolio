@@ -11,6 +11,7 @@ import { RouterLink } from "@angular/router";
 export class NavItemComponent {
     @Input({ transform: trimText }) navText?: string = undefined;
     @Input({ transform: trimText }) navTo?: string = undefined;
+    @Input() outerHref: boolean = false;
     @Input() reversed: boolean = false;
     @Input() handleClick?: (e: Event) => void;
 }

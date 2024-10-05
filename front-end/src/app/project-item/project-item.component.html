@@ -7,24 +7,20 @@
         <img [src]="imgBlob" class="max-w-52 max-h-40 object-cover" />
     </a>
     <div class="flex flex-col gap-2">
-        <p class="font-body text-lg max-w-[600px]">
-            {{ item?.body }}
-        </p>
         <a
             [attr.href]="item?.linkUrl !== undefined ? item?.linkUrl : null"
             target="_blank"
             class="flex flex-col gap-1 w-fit"
         >
             <p
-                [class.px-2]="item?.linkUrl"
-                [class.py-1]="item?.linkUrl"
-                [class.bg-secondary]="item?.linkUrl"
-                [class.text-secondary]="!item?.linkUrl"
-                [class.text-black]="item?.linkUrl"
-                class="rounded-lg border-secondary text-center"
+                [class.underline]="item?.linkUrl"
+                class="text-center text-secondary"
             >
                 {{ item?.linkText }}
             </p>
         </a>
+        <p class="font-body text-lg max-w-[600px]">
+            {{ item?.body }}
+        </p>
     </div>
 </div>

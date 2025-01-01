@@ -1,5 +1,27 @@
 [
     {
+        "name": "Solution Stream (Northstart UofU Project)",
+        "role": "Full-Stack Developer (Contracted)",
+        "from": "Dec 2024",
+        "to": "Current",
+        "items": [
+            "",
+            "Created a new commercial loan application for both admin and customer views.",
+            "C#, Blazor, ASP.NET"
+        ]
+    },
+    {
+        "name": "Solution Stream (Central Bank Project)",
+        "role": "Full-Stack Developer (Contracted)",
+        "from": "Sept 2024",
+        "to": "Current",
+        "items": [
+            "Angular, Typescript, Express JS, Sequelize, Postgresql.",
+            "Created a new commercial loan application for both admin and customer views.",
+            "Managed work into sprints with Jira."
+        ]
+    },
+    {
         "name": "Polar Bear Computers",
         "role": "Full-Stack Developer (Contracted)",
         "from": "Jan 2024",
@@ -8,7 +30,7 @@
             "Prototyped and created software to help preserve the Iñupiat people's of Alaska native language.",
             "Performed code reviews.",
             "Trained new coworkers.",
-            "C#, Blazor, ASP.NET, and Entity Framework"
+            "C#, Blazor, ASP.NET, Mysql, and Entity Framework"
         ]
     },
     {

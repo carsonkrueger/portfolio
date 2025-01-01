@@ -3,7 +3,7 @@ import { staticPath } from "../../static/static";
 import fs from "node:fs";
 import multer from "multer";
 import { authorize } from "../middleware/auth";
-const upload = multer({ dest: staticPath() });
+const upload = multer({ dest: staticPath(), storage: multer.memoryStorage() });
 
 module.exports = (app: Express) => {
     const router = Router();
@@ -14,15 +14,12 @@ module.exports = (app: Express) => {
 
     router.post(
         "/:name",
-        authorize,
         upload.single("file"),
+        authorize,
         async (req, res, next) => {
             if (req.file) {
-                fs.rename(
-                    staticPath(req.file?.filename),
-                    staticPath(req.params.name),
-                    (err) => console.error(err),
-                );
+                let path = staticPath(req.params.name)
+                fs.writeFile(path, req.file.buffer, () => { })
             }
             res.sendStatus(201);
         },

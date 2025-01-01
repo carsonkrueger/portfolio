@@ -6,14 +6,13 @@ dotenv.config();
 const PASSWORD_HASH = process.env.PASSWORD_HASH;
 
 export const authorize: RequestHandler = async (req, res, next) => {
-    console.log(await argon.hash(req.body.password));
-
     if (req.body.password === undefined || !PASSWORD_HASH) {
         res.sendStatus(401);
         return;
     }
 
-    if (!(await argon.verify(PASSWORD_HASH, req.body.password))) {
+    let authorized = await argon.verify(PASSWORD_HASH, req.body.password);
+    if (!authorized) {
         res.sendStatus(401);
         return;
     }

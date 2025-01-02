@@ -19,7 +19,7 @@ app.use(express.json());
 // parse html form data
 app.use(express.urlencoded({ extended: false }));
 // serve angular static build dir
-app.use(express.static(path.join(__dirname, "../fe-dist/browser")));
+app.use(express.static(path.join(__dirname, "../../front-end/dist/browser")));
 
 require("./routes/email")(app);
 require("./routes/resources")(app);
@@ -27,7 +27,7 @@ require("./routes/resources")(app);
 app.use("*", (_req, res) => {
     res.sendFile(
         // path.join(__dirname, "/../../front-end/dist/browser/index.html"),
-        path.join(__dirname, "../fe-dist/browser/index.html"),
+        path.join(__dirname, "../../front-end/dist/browser/index.html"),
     );
 });
 

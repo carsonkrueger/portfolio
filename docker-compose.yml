@@ -1,0 +1,10 @@
+services:
+    portfolio:
+        container_name: portfolio
+        build:
+            context: .
+            dockerfile: Dockerfile
+        ports:
+            - "80:80"
+        env_file:
+            - back-end/.env

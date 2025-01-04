@@ -1,5 +1,7 @@
 FROM node:latest
 
+RUN apt-get install -y git
+
 WORKDIR /app/portfolio/front-end
 COPY front-end/package.json ./
 RUN npm install

@@ -8,11 +8,13 @@
     >
       <ng-content />
     </button>
-    <div
-      class="ml-[70px] text-nowrap justify-center items-center px-3 py-2 rounded-md bg-yellow-300/10 backdrop-blur-xl hidden md:flex"
-      slot="popover"
-    >
-      {{ navText }}
-    </div>
+    @if (!!navText) {
+      <div
+        class="ml-[70px] text-nowrap justify-center items-center px-3 py-2 rounded-md bg-secondary backdrop-blur-xl hidden md:flex text-gray-700"
+        slot="popover"
+      >
+        {{ navText }}
+      </div>
+    }
   </app-popover>
 </a>

@@ -1,0 +1,8 @@
+<div class="relative hover-container">
+  <!-- Trigger -->
+  <ng-content select="[slot='trigger']" />
+  <!-- Popover Item -->
+  <div class="absolute margin-auto popover-content" [ngClass]="popoverClass">
+    <ng-content select="[slot='popover']" />
+  </div>
+</div>

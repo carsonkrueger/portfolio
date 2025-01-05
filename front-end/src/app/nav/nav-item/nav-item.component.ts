@@ -1,10 +1,11 @@
 import { Component, Input } from "@angular/core";
 import { RouterLink } from "@angular/router";
+import { PopoverComponent } from "../../popover/popover.component";
 
 @Component({
     selector: "app-nav-item",
     standalone: true,
-    imports: [NavItemComponent, RouterLink],
+    imports: [NavItemComponent, RouterLink, PopoverComponent],
     templateUrl: "./nav-item.component.html",
     styleUrl: "./nav-item.component.css",
 })

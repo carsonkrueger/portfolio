@@ -40,19 +40,23 @@
         "percentage": 83
     },
     {
-        "name": "Node.js",
-        "percentage": 81
+        "name": "Express.js",
+        "percentage": 84
     },
     {
         "name": "Python",
-        "percentage": 81
+        "percentage": 82
     },
     {
         "name": "Postgres",
-        "percentage": 80
+        "percentage": 81
     },
     {
-        "name": "C++/C",
-        "percentage": 78
+        "name": "Docker",
+        "percentage": 83
+    },
+    {
+        "name": "Linux",
+        "percentage": 89
     }
 ]

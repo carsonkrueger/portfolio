@@ -1,6 +1,7 @@
-FROM node:latest
+FROM node:alpine
 
-RUN apt-get install -y git
+# RUN apt-get update && apt-get install -y git
+RUN apk add --no-cache git
 
 WORKDIR /app/portfolio/front-end
 COPY front-end/package.json ./
@@ -13,8 +14,6 @@ COPY back-end/package.json ./
 RUN npm install
 COPY back-end/ ./
 
-ARG PORT
-RUN export $(cat .env | xargs) && export PORT=$PORT
-EXPOSE $PORT
+EXPOSE 80
 
 CMD ["npm", "run", "start"]

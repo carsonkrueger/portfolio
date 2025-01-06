@@ -63,8 +63,6 @@ if ! crontab -l | grep -q "deploy.sh"; then
     (crontab -l 2>/dev/null; echo "*/1 * * * * /app/portfolio/DEVOPS/deploy.sh >> $CRON_LOG_FILE 2>&1") | crontab -
     # crond
     echo "Cron job added"
-else
-    echo "Skipped cron"
 fi
 
 trap "rm -f $LOCK_FILE" EXIT

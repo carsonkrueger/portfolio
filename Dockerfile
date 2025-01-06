@@ -4,8 +4,9 @@ FROM node:alpine
 RUN apk add --no-cache git openssh-client
 
 WORKDIR /app/portfolio
+ARG CACHEBUST=1
 RUN git clone https://github.com/carsonkrueger/portfolio.git .
-COPY .env back-end/
+RUN cp .env back-end/ || true
 
 WORKDIR /app/portfolio/front-end
 # COPY front-end/package.json ./
@@ -20,8 +21,9 @@ RUN npm install
 
 WORKDIR /app/portfolio
 RUN ./DEVOPS/deploy.sh
+RUN crond
 
 EXPOSE 5000
 
 WORKDIR /app/portfolio/back-end
-CMD ["npm", "run", "start"]
+CMD crond && npm run start

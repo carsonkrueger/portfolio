@@ -3,21 +3,23 @@ FROM node:alpine
 # RUN apt-get update && apt-get install -y git
 RUN apk add --no-cache git openssh-client
 
+WORKDIR /app/portfolio
+RUN git clone https://github.com/carsonkrueger/portfolio.git .
+COPY .env back-end/
+
 WORKDIR /app/portfolio/front-end
-COPY front-end/package.json ./
+# COPY front-end/package.json ./
 RUN npm install
-COPY front-end/ ./
+# COPY front-end/ ./
 RUN npm run build
 
 WORKDIR /app/portfolio/back-end
-COPY back-end/package.json ./
+# COPY back-end/package.json ./
 RUN npm install
-COPY back-end/ ./
+# COPY back-end/ ./
 
-WORKDIR /app/portfolio/DEVOPS
-COPY DEVOPS/ ./
-RUN crond
-RUN ./redeploy.sh
+WORKDIR /app/portfolio
+RUN ./DEVOPS/deploy.sh
 
 EXPOSE 5000
 

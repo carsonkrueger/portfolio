@@ -48,6 +48,9 @@ if [ "$CURRENT" != "$REMOTE" ]; then
 
     # Rebuild application
     cd back-end
+    if [ -f app.pid ]; then
+        npm run stop
+    fi
     npm run start
     cd ..
 

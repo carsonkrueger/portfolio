@@ -2,6 +2,7 @@ import { HttpClient } from "@angular/common/http";
 import { AfterViewInit, Component, ElementRef, ViewChild } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { NavService } from "../../services/nav.service";
+import { BASE_URL } from "../../util/http-client";
 
 type EmailBody = {
     from: string;
@@ -37,7 +38,7 @@ export class ContactComponent implements AfterViewInit {
         try {
             this.loading = true;
             this.http
-                .post("http://localhost:3000/email/", body)
+                .post(`${BASE_URL}/email/`, body)
                 .subscribe((res) => {
                     this.from = "";
                     this.body = "";

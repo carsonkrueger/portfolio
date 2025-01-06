@@ -1,20 +1,20 @@
 <a [routerLink]="navTo ? navTo : null" target="_blank">
-  <app-popover popoverClass="top-0 bottom-0">
-    <button
-      slot="trigger"
-      class="flex justify-center items-center p-2 gap-2 rounded-md font-body text-lg animate-all"
-      [class.flex-row-reverse]="reversed"
-      (click)="handleClick ? handleClick($event) : null"
-    >
-      <ng-content />
-    </button>
-    @if (!!navText) {
-      <div
-        class="ml-[70px] text-nowrap justify-center items-center px-3 py-2 rounded-md bg-secondary backdrop-blur-xl hidden md:flex text-gray-700"
-        slot="popover"
-      >
-        {{ navText }}
-      </div>
-    }
-  </app-popover>
+    <app-popover popoverClass="top-0 bottom-0 left-full">
+        <button
+            slot="trigger"
+            class="flex justify-center items-center p-2 gap-2 rounded-md font-body text-lg animate-all"
+            [class.flex-row-reverse]="reversed"
+            (click)="handleClick ? handleClick($event) : null"
+        >
+            <ng-content />
+        </button>
+        @if (!!navText) {
+            <div
+                class="ml-[20px] text-nowrap justify-center items-center px-3 py-2 rounded-md bg-secondary backdrop-blur-xl hidden md:flex text-gray-700"
+                slot="popover"
+            >
+                {{ navText }}
+            </div>
+        }
+    </app-popover>
 </a>

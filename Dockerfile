@@ -1,7 +1,7 @@
 FROM node:alpine
 
 # RUN apt-get update && apt-get install -y git
-RUN apk add --no-cache git
+RUN apk add --no-cache git openssh-client
 
 WORKDIR /app/portfolio/front-end
 COPY front-end/package.json ./
@@ -14,6 +14,12 @@ COPY back-end/package.json ./
 RUN npm install
 COPY back-end/ ./
 
-EXPOSE 80
+WORKDIR /app/portfolio/DEVOPS
+COPY DEVOPS/ ./
+RUN crond
+RUN ./redeploy.sh
 
+EXPOSE 5000
+
+WORKDIR /app/portfolio/back-end
 CMD ["npm", "run", "start"]

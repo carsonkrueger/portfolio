@@ -1,0 +1,23 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/carsonkrueger/portfolio#readme",
+  "bugs": {
+    "url": "https://github.com/carsonkrueger/portfolio/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carsonkrueger/portfolio.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "build:be": "cd back-end && npm i",
+    "build:fe": "cd front-end && npm i && npm run build",
+    "build": "npm run build:fe && npm run build:be",
+    "start": "npm run build && cd back-end && npm run start"
+  }
+}

@@ -48,10 +48,17 @@ if [ "$CURRENT" != "$REMOTE" ]; then
     # Pull the latest changes
     git pull $GIT_URL main:main --force
 
+    PID_FILE="/tmp/app.pid"
+    # Kill existing process if running
+    if [ -f "$PID_FILE" ]; then
+        kill $(cat "$PID_FILE")
+        rm -f "$PID_FILE"
+        sleep 2
+    fi
+
     # Rebuild application
     cd back-end
-    pkill -f "ts-node.*index.ts" || true
-    npm run start &
+    npx ts-node src/index.ts & echo $! > "$PID_FILE"
     disown
     cd ..
 

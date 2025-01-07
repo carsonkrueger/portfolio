@@ -24,9 +24,6 @@ RUN npm install
 
 WORKDIR /app/portfolio
 RUN ./DEVOPS/deploy.sh
-RUN crond
-
 EXPOSE 5000
-
-WORKDIR /app/portfolio/back-end
-CMD crond && npm run start
+CMD ["./DEVOPS/start.sh"]
+# CMD crond && npm run start

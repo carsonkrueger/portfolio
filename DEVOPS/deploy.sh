@@ -7,13 +7,13 @@ cleanup() {
     rm -f "$LOCK_FILE"
 }
 
-# Set trap for various exit scenarios
-trap cleanup EXIT INT TERM
-
 if [ -f "$LOCK_FILE" ]; then
     echo "Another deployment is in progress"
     exit 1
 fi
+
+# Set trap for various exit scenarios
+trap cleanup EXIT INT TERM
 
 touch "$LOCK_FILE"
 

@@ -8,4 +8,3 @@ crond
 
 npx ts-node src/index.ts & echo $! > /tmp/app.pid
 exec sleep infinity
-# wait $!

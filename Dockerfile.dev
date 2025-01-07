@@ -1,0 +1,18 @@
+FROM node:alpine
+
+RUN apk add --no-cache git openssh-client
+
+RUN echo "$CACHEBUST"
+WORKDIR /app/portfolio/back-end
+COPY back-end/package.json ./
+RUN npm i
+
+WORKDIR /app/portfolio/front-end
+COPY front-end/package.json ./
+RUN npm i
+
+WORKDIR /app/portfolio
+COPY . .
+
+WORKDIR /app/portfolio/back-end
+CMD ["npm", "run", "start"]

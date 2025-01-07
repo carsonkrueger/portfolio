@@ -8,3 +8,12 @@ services:
                 CACHEBUST: ${CACHEBUST}
         ports:
             - "5000:5000"
+
+    portfolio-dev:
+        build:
+            context: .
+            dockerfile: Dockerfile.dev
+            args:
+                CACHEBUST: ${CACHEBUST}
+        ports:
+            - "5000:5000"

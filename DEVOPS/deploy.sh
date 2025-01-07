@@ -51,12 +51,14 @@ if [ "$CURRENT" != "$REMOTE" ]; then
     # Rebuild application
     cd back-end
     pkill -f "ts-node.*index.ts" || true
-    npm run start
+    npm run start &
+    disown
     cd ..
 
-    echo "$CURRENT_TIME: Deployment completed"
+    END_TIME=$(date +"%Y-%m-%d %H:%M:%S")
+    echo "$END_TIME: Deployment completed"
 else
-    echo "No changes detected"
+    echo "$CURRENT_TIME: No changes detected"
 fi
 
 if ! crontab -l | grep -q "deploy.sh"; then

@@ -1,8 +1,8 @@
 export enum Environment {
-  DEVELOPEMENT,
-  PRODUCTION,
+    DEVELOPEMENT,
+    PRODUCTION,
 }
 
 export const ANGULAR_ENV = {
-  ENVIRONMENT: Environment.PRODUCTION,
+    ENVIRONMENT: Environment.DEVELOPEMENT,
 };

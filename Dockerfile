@@ -1,10 +1,12 @@
 FROM node:alpine
 
+ARG CACHEBUST
+
 RUN apk add --no-cache git openssh-client
 
 WORKDIR /app/portfolio
 RUN git clone https://github.com/carsonkrueger/portfolio.git .
-ARG CACHEBUST=1
+COPY .env ./
 RUN echo "$CACHEBUST" \
     && git stash \
     && git pull origin main

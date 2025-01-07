@@ -48,7 +48,7 @@ if [ "$CURRENT" != "$REMOTE" ]; then
 
     # Rebuild application
     cd back-end
-    pkill -f "/app/portfolio/back-end/src/index.ts" || true
+    pkill -f "node.*ts-node.*index.ts" || true
     npm run start
     cd ..
 

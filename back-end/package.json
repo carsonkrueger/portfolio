@@ -4,8 +4,7 @@
     "main": "src/index.ts",
     "scripts": {
         "build": "npx tsc && cp -r fe-dist dist && cp -r static dist",
-        "start": "npx ts-node src/index.ts & echo $! > app.pid",
-        "stop": "kill $(cat app.pid) && rm -f app.pid",
+        "start": "npx ts-node src/index.ts",
         "watch": "npx nodemon",
         "test": "echo \"Error: no test specified\" && exit 1"
     },

@@ -6,7 +6,6 @@ RUN apk add --no-cache git openssh-client
 WORKDIR /app/portfolio
 ARG CACHEBUST=1
 RUN git clone https://github.com/carsonkrueger/portfolio.git .
-RUN cp .env back-end/ || true
 
 WORKDIR /app/portfolio/front-end
 # COPY front-end/package.json ./

@@ -6,6 +6,9 @@ RUN apk add --no-cache git openssh-client
 WORKDIR /app/portfolio
 ARG CACHEBUST=1
 RUN git clone https://github.com/carsonkrueger/portfolio.git .
+ARG CACHEBUST=1
+RUN git stash
+ARG CACHEBUST=1
 RUN git pull origin main
 
 WORKDIR /app/portfolio/front-end

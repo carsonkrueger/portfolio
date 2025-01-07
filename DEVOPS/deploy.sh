@@ -43,12 +43,13 @@ REMOTE=$(git ls-remote origin main | cut -f1)
 if [ "$CURRENT" != "$REMOTE" ]; then
     echo "Changes detected, pulling updates..."
 
+    git stash
     # Pull the latest changes
     git pull $GIT_URL main:main --force
 
     # Rebuild application
     cd back-end
-    pkill -f "node.*ts-node.*index.ts" || true
+    pkill -f "ts-node.*index.ts" || true
     npm run start
     cd ..
 

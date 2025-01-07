@@ -30,7 +30,8 @@ if [ ! -d ".git" ]; then
     git checkout -b main
 fi
 
-git fetch $GIT_URL main
+git fetch $GIT_URL main --quiet
+CURRENT_TIME=$(date +"%Y-%m-%d %H:%M:%S")
 
 # Get the hash of the latest local commit
 # UPSTREAM=${1:-'@{u}'}
@@ -41,7 +42,7 @@ REMOTE=$(git ls-remote origin main | cut -f1)
 
 # Compare hashes to check for changes
 if [ "$CURRENT" != "$REMOTE" ]; then
-    echo "Changes detected, pulling updates..."
+    echo "$CURRENT_TIME: Changes detected, pulling updates..."
 
     git stash
     # Pull the latest changes
@@ -53,7 +54,7 @@ if [ "$CURRENT" != "$REMOTE" ]; then
     npm run start
     cd ..
 
-    echo "Deployment completed"
+    echo "$CURRENT_TIME: Deployment completed"
 else
     echo "No changes detected"
 fi

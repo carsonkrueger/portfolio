@@ -59,7 +59,6 @@ if [ "$CURRENT" != "$REMOTE" ]; then
     # Rebuild application
     cd back-end
     npx ts-node src/index.ts & echo $! > "$PID_FILE"
-    disown
     cd ..
 
     END_TIME=$(date +"%Y-%m-%d %H:%M:%S")

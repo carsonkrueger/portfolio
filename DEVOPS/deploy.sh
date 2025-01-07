@@ -46,7 +46,7 @@ if [ "$CURRENT" != "$REMOTE" ]; then
 
     git stash
     # Pull the latest changes
-    git pull $GIT_URL main:main --force
+    git pull $GIT_URL main:main
 
     PID_FILE="/tmp/app.pid"
     # Kill existing process if running
